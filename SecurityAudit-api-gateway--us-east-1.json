@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Condition": {"StringLike": {"aws:requestedRegion": [
+            "us-east-1"
+          ]}},
+          "Action": [
+            "apigateway:GET"
+          ],
+          "Resource": [
+              "arn:aws:apigateway:*::/apis",
+              "arn:aws:apigateway:*::/apis/*/routes",
+              "arn:aws:apigateway:*::/apis/*/stages",
+              "arn:aws:apigateway:*::/apis/*/stages/*",
+              "arn:aws:apigateway:*::/clientcertificates/*",
+              "arn:aws:apigateway:*::/restapis",
+              "arn:aws:apigateway:*::/restapis/*/authorizers",
+              "arn:aws:apigateway:*::/restapis/*/authorizers/*",
+              "arn:aws:apigateway:*::/restapis/*/documentation/versions",
+              "arn:aws:apigateway:*::/restapis/*/resources",
+              "arn:aws:apigateway:*::/restapis/*/resources/*",
+              "arn:aws:apigateway:*::/restapis/*/resources/*/methods/*",
+              "arn:aws:apigateway:*::/restapis/*/stages",
+              "arn:aws:apigateway:*::/restapis/*/stages/*",
+              "arn:aws:apigateway:*::/tags/*",
+              "arn:aws:apigateway:*::/vpclinks"
+          ]
+        }
+    ]
+}
